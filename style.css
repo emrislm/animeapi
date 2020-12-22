@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #F2F4F9;
+    background-color: rgb(40, 0, 80);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,19 +17,34 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+#init-text{
+    position: absolute;
+
+    top: 43%; bottom: auto;
+    left: 33%; right: auto;
+}
+#init-text h1 {
+    margin: 0;
+}
+
+.hid {
+    visibility: hidden;
+}
+
 .container {
     background-color: #fff;
     width: 55%;
-    min-height: 55%;
+    min-height: 450px;
 
     display: flex;
     flex-direction: column;
 
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+    position: relative;
 }
 
 .header {
-    background-color: #fff;
     width: 100%;
 
     padding: 0.75rem 1rem;
@@ -44,13 +59,10 @@ body {
     padding: 0.25rem 0.50rem;
 
     border: none;
-    background-color: #185cda33;
+    background-color: #eee;
 }
-.header .search:hover {
-    background-color: #185cda40;
-}
-.header .search:focus {
-    background-color: #185cda4d;
+.header .search:hover, .header .search:focus {
+    background-color: #e1dafc;
 }
 .header .searchBtn {
     border: none;
@@ -60,7 +72,6 @@ body {
     margin: 0;
 }
 .header #animeScore {
-    color: #185cda;
     font-size: 0.85rem;
     font-weight: bold;
 }
