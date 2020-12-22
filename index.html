@@ -15,31 +15,39 @@
 <body>
 
 <div class="container">
+
+    <div id="init-text">
+        <h1>Begin by searching!!</h1>
+    </div>
+
     <div class="header">
-        <div class="left">
+        <div id="left" class="left">
             <h1 id="animeTitle">title</h1>
             <h5><span id="animeScore">score</span>/10</h5>
         </div> 
         <div class="right">
-            <input type="text" id="search" class="search" autocomplete="no" />
-            <button class="searchBtn" onclick="searchAnime()"><i class="fas fa-search"></i></button>
+            <form id="form" class="form">
+                <input type="text" id="search" class="search" autocomplete="no" />
+            </form>
+            
+            <!-- <button class="searchBtn" onclick="searchAnime()"><i class="fas fa-search"></i></button> -->
         </div> 
     </div>
-    <div class="content">
+    <div id="content" class="content">
         <div class="photo">
             <img id="animeImg" src="" alt="img">
         </div>
         <div class="info">
             <div class="mainInfo-container">
                 <div class="mainInfo">
-                    <h4>Synopsis</h4>
+                    <h4 class="data">Synopsis</h4>
                     <p id="animeSynopsis">synopsistxt</p>
                 </div>
                 <div class="extraInfo">
-                    <p><span class="infoHeader">Episodes</span><span class="extraInfoData" id="animeEpisodes">episodes</span></p>
-                    <p><span class="infoHeader">Date Aired</span><span class="extraInfoData" id="animeAired">startdate</span></p>
-                    <p><span class="infoHeader">Date Stopped</span><span class="extraInfoData" id="animeStopped">enddate</span></p>
-                    <p><span class="infoHeader">PG rating</span><span class="extraInfoData" id="animePG">rating</span></p>
+                    <p><span class="infoHeader data">Episodes</span><span class="extraInfoData" id="animeEpisodes">episodes</span></p>
+                    <p><span class="infoHeader data">Date Aired</span><span class="extraInfoData" id="animeAired">startdate</span></p>
+                    <p><span class="infoHeader data">Date Stopped</span><span class="extraInfoData" id="animeStopped">enddate</span></p>
+                    <p><span class="infoHeader data">PG rating</span><span class="extraInfoData" id="animePG">rating</span></p>
                 </div>
             </div>
         </div>
