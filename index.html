@@ -5,10 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Anime App</title>
+
+    <link rel="shortcut icon" href="#">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    
+<div class="container">
+    <div class="header">
+        <div class="left">
+            <h1 id="animeTitle">title</h1>
+            <h5><span id="animeScore">score</span>/10</h5>
+        </div> 
+        <div class="right">
+            <input type="text" id="search" class="search" autocomplete="no" />
+            <button class="searchBtn" onclick="searchAnime()"><i class="fas fa-search"></i></button>
+        </div> 
+    </div>
+    <div class="content">
+        <div class="photo">
+            <img id="animeImg" src="" alt="img">
+        </div>
+        <div class="info">
+            <div class="mainInfo-container">
+                <div class="mainInfo">
+                    <h4>Synopsis</h4>
+                    <p id="animeSynopsis">synopsistxt</p>
+                </div>
+                <div class="extraInfo">
+                    <p><span class="infoHeader">Episodes</span><span class="extraInfoData" id="animeEpisodes">episodes</span></p>
+                    <p><span class="infoHeader">Date Aired</span><span class="extraInfoData" id="animeAired">startdate</span></p>
+                    <p><span class="infoHeader">Date Stopped</span><span class="extraInfoData" id="animeStopped">enddate</span></p>
+                    <p><span class="infoHeader">PG rating</span><span class="extraInfoData" id="animePG">rating</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     
 </body>
 </html>
