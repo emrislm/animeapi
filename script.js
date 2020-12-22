@@ -6,6 +6,35 @@ const startedEl = document.getElementById('animeAired');
 const stoppedEl = document.getElementById('animeStopped');
 const episodesEl = document.getElementById('animeEpisodes');
 const ratingEl = document.getElementById('animePG');
+const formEl = document.getElementById('form');
+
+sessionStorage.setItem("init", "false");
+document.getElementById('left').classList.add('hid');
+document.getElementById('content').classList.add('hid');
+document.getElementById('search').value = "";
+
+formEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    getInput();    
+});
+
+function getInput() {
+    const search = document.getElementById('search');
+
+    if (search.value != "") {
+        sessionStorage.setItem("init", "true");
+    }
+
+    if (sessionStorage.getItem("init") == "true") {
+        console.log(search.value);
+        getAnimeBySearch(search.value);
+
+        document.getElementById('left').classList.remove('hid');
+        document.getElementById('content').classList.remove('hid');
+        document.getElementById('init-text').classList.add('hid');
+    }
+}
 
 async function getAnimeBySearch(term) {
     const resp = await fetch("https://api.jikan.moe/v3/search/anime?q=" + term);
@@ -35,10 +64,3 @@ function convertISOtoNormal(date) {
 
     return day + "-" + month + "-" + year;
 }
-
-function searchAnime() {
-    const inputval = document.getElementById('search').value;
-    getAnimeBySearch(inputval);
-}
-
-getAnimeBySearch("demon lord retry");
