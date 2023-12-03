@@ -37,7 +37,7 @@ function getInput() {
 }
 
 async function getAnimeBySearch(term) {
-    const resp = await fetch("https://api.jikan.moe/v3/search/anime?q=" + term);
+    const resp = await fetch("https://api.jikan.moe/v4/anime?q=" + term);
     const animeData = await resp.json();
 
     const searchedAnime = animeData.results[0];
